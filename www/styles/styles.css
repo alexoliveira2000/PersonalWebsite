@@ -1,0 +1,30 @@
+table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            color: white;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+            background-color: darkred;
+            border: 0;
+        }
+        th:hover {
+          background-color: #F14146;
+          transition: 0.3s;
+          color: black;
+        }
+        img {
+          border-radius: 50%;
+        }
+        body {
+            margin: 0;background-color: #F14146;
+          }
+        a {
+          color: inherit; 
+         	text-decoration: white;
+        }
+        .presentPage{
+          background-color: #F14146;
+          color: white;
+      }
