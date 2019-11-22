@@ -1,34 +1,54 @@
 
-        img {
-          border-radius: 50%;
-        }
-        body {
-            margin: 0;background-color: #bbb9b9;
-          }
-        a {
-          color: inherit; 
-         	text-decoration: white;
-        }
-        .fa {
-          padding: 20px;
-          font-size: 30px;
-          width: 30px;
-          text-align: center;
-          text-decoration: none;
-          border-radius: 50%;
-        }
-
-        .menuu a{
-          padding-top: 25px;
-          padding-bottom: 20px;
-          background-color:#f2f2f2;
-          border-style: solid;
-          border-width: 2px;
-          height: 200px;
-          width: 40%;
-          margin-top: 60px;
+      img {
+        border-radius: 50%;
+      }
+  
+      body {
+        font-family: Arial, Helvetica, san-serif;
+        background-color: rgb(182, 182, 182);
+      }
+  
+      .nav {
+        overflow: hidden;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: rgb(158, 158, 158);
+      }
+  
+      .nav a {
+        float: left;
+        padding: 14px 16px;
+        text-align: center;
+        font-size: 17px;
+        color: black;
+        text-decoration: none;
+      }
+  
+      .footeritems {
+        padding: 10px;
+        font-size: 20px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+  
+      .nav a:hover {
+        background-color: rgb(66, 66, 66);
+        color: white;
+      }
+  
+      .footer {
+        position: fixed;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(66, 66, 66);
       }
 
-        #teste {
-          background-color:red;
-        }
+      .table td {
+        padding: 20px;
+      }
