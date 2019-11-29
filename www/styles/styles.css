@@ -1,54 +1,447 @@
+body {
+  font-family: Arial, Helvetica, san-serif;
+  /*background-color: rgb(182, 182, 182);*/
+  background-image: url("/images/background2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0px;
+  font-size: 17px;
+  font-family: "Trebuchet MS";
+  color: black;
+  text-decoration: none;
+  overflow:auto;
+  /*background-repeat: no-repeat;*/
+}
 
-      img {
-        border-radius: 50%;
-      }
+.separator{
+  margin-bottom:90px;
+  width:100%;
+  position:static;
+}
+
+.info{
+  width:100%;
+}
+
+.info img{
+  width:300px;
+  height:300px;
+  padding:100px;
+  border-radius:50%;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.info p{
+  text-align:center;
+}
+
+table {
+  text-align: left;
+  flex: 1;
+}
+
+  /* Barra de navegação */
+  .menu {
+    overflow: hidden;
+    position: sticky; /* Colar barra ao topo, ao dar scroll na página */
+    display: flex; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    flex: 1;
+    /*background-color: rgb(158, 158, 158);*/
+    /*background-image: url("/images/backgroundTopBar.jpg");*/
+  }
+
+  /* Menu */
+  ul#menu {
+    list-style-type: none; /* Retirar pontos da lista */
+    display: inline-flex; /* Todos os items vão estar na mesma linha */
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Itens do menu */
+  li {
+    /*flex: 1; /* Todos os items são do mesmo tamanho */
+  }
+
+  /* Hiperligação dos itens do menu */
+  li.menuItem a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+
+    float: left;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Trebuchet MS";
+    color: black;
+    text-decoration: none;
+
+    transition: 0.5s;
+  }
+
+  /* Sublinha a página ativa */
+  #menu li a.current {
+    /*text-decoration: underline;*/
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
   
-      body {
-        font-family: Arial, Helvetica, san-serif;
-        background-color: rgb(182, 182, 182);
-      }
-  
+
+  /* Mudança de cor, quando está ativo */
+  /*
+  li.menuItem:hover:not(.active), li.menuItem.active { */
+    /*background-color: black; */
+    /*
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+  }
+  */
+
+  /* aumentar o tamanho da letra */
+  li.menuItem a:hover {
+    font-size: 20px;
+  }
+
+  /* Div para ícone dos itens do menu */
+  li.menuItem > a > div {
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+  }
+
+  /* Texto dos itens do menu */
+  li.menuItem > a > span {
+    line-height: 50px;
+    color: black;
+  }
+
+  /* Imagem do logotipo */
+  /*
+  #logo {
+    background: url("../images/Bugtracker-LargeLogo.png") no-repeat center;
+  }
+  */
+
+  /* Imagens dos itens do menu */
+  #logoHome {
+    background: url("/images/logo-home.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #logoDadosPessoais {
+    background: url("/images/logo-dadosPessoais.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #logoCurriculum {
+    background: url("/images/logo-curriculum.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #logoFormacao {
+    background: url("/images/logo-formacao.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #logoProjetos {
+    background: url("/images/logo-projetos.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #logoHobbies {
+    background: url("/images/logo-hobbies.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #logoOutros {
+    background: url("/images/logo-outros.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+  /*
+  #logoHome div.active {
+    text-decoration: underline;
+  }
+  */
+  /* Tabelas */
+  #table {
+    width: 100%;
+  }
+
+  /* Linhas e espaçamento */
+  #table, #table th, #table td {
+    border-collapse: collapse; /* Unir linhas adjacentes e paralelas, numa só */ 
+  }
+
+  #table thead, #table tbody {
+    border: 1px solid grey;
+  }
+
+  #table th {
+    padding: 16px; /* Espaçamento envolta do conteúdo das células */
+    text-align: left;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+
+  #table td {
+    padding: 12px; /* Espaçamento envolta do conteúdo das células */
+    text-align: left;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+
+  #table td a {
+    cursor: pointer;
+    color: brown;
+    font-weight: bolder;
+  }
+
+  #table td a:hover {
+    text-decoration: underline;
+  }
+
+  /* Rodapé */
+  .footeritems {
+    padding: 10px;
+    font-size: 20px;
+    width: 50px;
+    /*text-align: right;*/
+    float: right;
+    text-decoration: none;
+    margin: 5px 2px;
+    vertical-align: middle;
+  }
+  .footer {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(66, 66, 66, 1);
+    height: 60px;
+  }
+
+  /* Adaptação para dispositivos móveis
+      Alterações:
+        1. Esconder barra de navegação
+        2. Mostrar menu "hambúrguer" 
+  */
+  @media screen and (max-width: 1000px) {
+    main {
+      margin: 0;
+    }
+
+    nav {
+      top: 0;
+      right: 0;
+    }
+
+    nav::before { 
+      display: block;
+      content: "\2630";
+      font-size: 1.7em; 
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      padding-right: 20px;
+      padding-top: 15px;
+      
+      /*background-image: url("/images/dropdown.png") no-repeat center /*rgba(0, 0, 0, 0.8)*/;
+
+    }
+
+    nav a {
+      /*padding-right: 100px;*/
+      background-color: white;
+      width: 100%;
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: 4rem;
+      ;
+    }
+
+    nav:hover::before {
+      display: none;
+      background: transparent;
+    }
+
+  ul#menu {
+      display: none;
+    }
+
+    nav:hover #menu {
+      display: inline-block;
+    }
+  }
+      
+
+    /*  
       .nav {
         overflow: hidden;
         position: fixed; 
         left: 0;
         top: 0;
         width: 100%;
-        background-color: rgb(158, 158, 158);
+        */
+        /*background-color: rgb(158, 158, 158);*/
+        /*background-image: url("/images/backgroundTopBar.jpg");*/
+        /*
       }
   
-      .nav a {
-        float: left;
+      .nav2 a:first-child { float: left; }
+
+      .nav2 a {
+        float: right;
         padding: 14px 16px;
         text-align: center;
         font-size: 17px;
         color: black;
         text-decoration: none;
       }
-  
-      .footeritems {
-        padding: 10px;
-        font-size: 20px;
-        width: 50px;
+
+      .nav a {
+        float: left;
+        padding: 14px 16px;
         text-align: center;
+        font-size: 17px;
+        font-family: "Trebuchet MS";
+        color: black;
         text-decoration: none;
-        margin: 5px 2px;
-      }
-  
-      .nav a:hover {
-        background-color: rgb(66, 66, 66);
-        color: white;
-      }
-  
-      .footer {
-        position: fixed;
-        text-align: center;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgb(66, 66, 66);
+        transition: 0.5s;  
       }
 
-      .table td {
-        padding: 20px;
+      .nav a:hover, .nav2 a:hover, li.dropdownMenu:hover {
+        */
+        /*background-color: rgb(66, 66, 66);
+        /*opacity: 0.3;
+        color: white;*/
+        /*
+        font-size: 20px; 
       }
+
+      .hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear;
+      }
+
+      .nav2 {
+        overflow: hidden;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        */
+        /*background-color: rgb(158, 158, 158);*/
+        /*
+        display: none;       
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      .table th, .table td {
+        padding: 20px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      ul.dropdownMenu {
+        list-style-type: none;
+        border: 1px solid black;
+        width: 200px;
+        float: right;
+        margin-top: 47px;
+        display: none;
+      }
+
+      li.dropdownMenu {
+        border-top: 1px solid black;
+        background-color: gray;
+        margin-left: -40px;
+        padding: 10px;
+        background-color: rgb(158, 158, 158);
+        font-family: "Trebuchet MS";
+        color: black;
+        text-decoration: none;
+        font-size: 17px;
+      }
+       
+      /*
+      #menuHome {
+        left: 0;
+        background-image: url("\images\logo-home.jpg");
+      }
+      
+      #menuDadosPessoais {
+        left: 120px;
+        background-image: url("images/logo-dadosPessoais.png");
+      }
+       
+      #menuCurriculum {
+        left: 240px;
+        background-image: url("images/logo-curriculum.png");
+      }
+       
+      #menuFormacao {
+        left: 360px;
+        background-image: url("images/logo-formacao.png");
+      }
+
+      #menuHobbies {
+        left: 480px;
+        background-image: url("images/logo-hobbies.png");
+      }
+
+      #menuOutros {
+        left: 600px;
+        background-image: url("images/logo-outros.png");
+      }
+
+      #menuProjetos {
+        left: 720px;
+        background-image: url("images/logo-projetos.png");
+      }
+      */      
+
+      /*
+      @media screen and (max-width: 800px) {
+        .nav {
+          display: none;
+        }
+        
+        .nav2 {
+          display: block;
+        }
+
+        ul.dropdownMenu {
+          display: block;
+        }
+        */
+        /*
+        nav::before {
+          content: "\2630";
+          font-size: 1.5em;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 998;
+        }
+        */
+        /*
+      }
+      */
+      
